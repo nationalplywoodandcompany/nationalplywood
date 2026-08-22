@@ -16,7 +16,7 @@
 
 ## Order
 - 01.06.2026 09:52 rates: MEMBRANE HW 105 / LAMINATION 112 / SIDE PINE +15
-- 02.06.2026 memorandum — WRITTEN BY THE SUPPLIER in his own hand on his own pad at his office;
+- 02.06.2026 memorandum — WRITTEN BY THE SUPPLIER in his own hand at his office, on a PLAIN SHEET with no firm letterhead;
   SIGNED BY THE BUYER as acknowledgement of the Rs 20,000 cash; ORIGINAL RETAINED BY THE SUPPLIER,
   buyer allowed only to photograph it; photo sent to supplier on WhatsApp 02.06.2026 17:19 with the
   endorsement "20000/- cash Paid (As a Advance) To BG timber From Kolkata Plywood & Co." — NEVER DISPUTED BY HIM:
