@@ -40,7 +40,7 @@ const CHRON = [
   ['02.06.2026', 'Meeting at the Noticee’s office. Advance of Rs. 20,000/- paid in cash. Noticee represented that delivery would be completed within 10 to 15 days.'],
   ['04.06.2026', 'Complete door size list (94 pcs) sent to the Noticee on WhatsApp.'],
   ['09.06.2026', 'Rs. 80,000/- transferred to the current account of M/s Wood and Wood Products on the Noticee’s demand.'],
-  ['08.07.2026', 'Rs. 50,000/- and Rs. 20,000/- transferred to savings accounts of two third parties nominated by the Noticee.'],
+  ['08.07.2026 and 09.07.2026', 'Rs. 20,000/- and Rs. 50,000/- respectively transferred to savings accounts of two third parties nominated by the Noticee.'],
   ['11.07.2026', 'Rs. 51,200/- transferred to a savings account of a third party nominated by the Noticee, on the very date of dispatch. Total consideration of Rs. 2,21,200/- thereby stood fully paid.'],
   ['24.06.2026', 'Outer limit of the promised 15-day delivery period expired. No delivery made.'],
   ['25.06.2026 to 10.07.2026', 'Delivery repeatedly postponed by the Noticee on varying pretexts (rain, delayed payment, vehicle problems). Assurances of 30.06, 02.07, 09.07, 10.07 and 11.07 given and broken in turn.'],
@@ -115,9 +115,9 @@ const damageRows = [
 // ---- Payment schedule table -------------------------------------------
 const PAYMENTS = [
   ['02.06.2026', 'Cash', 'Paid in hand at the Noticee’s office', '20,000'],
-  ['09.06.2026', 'Bank transfer', 'Current account of M/s Wood and Wood Products  [VERIFY DATE AGAINST BANK STATEMENT]', '80,000'],
-  ['08.07.2026', 'Bank transfer', 'Savings account in the name of Sri Ramkrishna Mandal, as nominated by the Noticee', '50,000'],
+  ['09.06.2026', 'Bank transfer', 'Current account of M/s Wood and Wood Products', '80,000'],
   ['08.07.2026', 'Bank transfer', 'Savings account in the name of Sri Ajay Sharma, as nominated by the Noticee', '20,000'],
+  ['09.07.2026', 'Bank transfer', 'Savings account in the name of Sri Ramkrishna Mandal, as nominated by the Noticee', '50,000'],
   ['11.07.2026', 'Bank transfer', 'Savings account in the name of Sri Ajay Sharma, as nominated by the Noticee', '51,200'],
 ];
 
@@ -241,7 +241,7 @@ const doc = new Document({
       new Paragraph({ numbering: { reference: 'demands', level: 0 }, spacing: { after: 100, line: 276 },
         children: [t('Issue to my client a proper credit note and/or delivery challan in respect of the 21 pcs returned to you on 30.07.2026, so as to enable my client to correctly reflect the transaction in his statutory returns;')] }),
       new Paragraph({ numbering: { reference: 'demands', level: 0 }, spacing: { after: 100, line: 276 },
-        children: [t('Issue to my client a proper tax invoice for the full value of the goods supplied, namely Rs. 2,21,200/-, in accordance with Section 31 of the Central Goods and Services Tax Act, 2017, my client having paid the said sum in its entirety; and')] }),
+        children: [t('Issue to my client, in respect of the 21 pcs now being re-supplied by way of replacement against the original supply, a proper delivery challan under Rule 55 of the Central Goods and Services Tax Rules, 2017 together with the corresponding e-way bill, and not a fresh tax invoice, the said goods being a replacement of goods already invoiced; and')] }),
       new Paragraph({ numbering: { reference: 'demands', level: 0 }, spacing: { after: 160, line: 276 },
         children: [t('Confirm in writing that the full value of the goods supplied has been duly reported by you in your outward supply returns under the Central Goods and Services Tax Act, 2017, so that my client may avail of the input tax credit to which he is lawfully entitled.')] }),
 
@@ -283,7 +283,7 @@ const doc = new Document({
         'The client is a trader who purchased the goods for onward resale; the availability of a remedy under the Consumer Protection Act, 2019 in view of Section 2(7) may require consideration.',
         'The client holds audio recordings of the conversations to which he was himself a party. Please preserve the original recordings on the original device and prepare the certificate under Section 63 of the Bharatiya Sakshya Adhiniyam, 2023.',
         'IMPORTANT — of the total consideration of Rs. 2,21,200/-, only Rs. 80,000/- was paid into the Noticee firm’s own current account. Rs. 20,000/- was paid in cash and Rs. 1,21,200/- into savings accounts of two individuals nominated by the Noticee. Please satisfy yourself, from the WhatsApp record, that the Noticee himself furnished those account particulars, as proof of payment will otherwise be contested. Please also advise the client separately on his own position under Section 40A(3) of the Income-tax Act, 1961 in respect of the cash payment, and on his invoicing and input tax credit position, before this notice is issued.',
-        'The date of the Rs. 80,000/- transfer must be verified against the bank statement — the client has stated it variously as 09.06.2026 and 09.07.2026, and the delay computation in this notice turns on it.',
+        'The client has been supplied a tax invoice for Rs. 80,000/- against the original consignment and has raised a corresponding invoice on his own customer for the same value, the customer being aware from the outset that the balance would not be invoiced. The claim for the unbilled balance of Rs. 1,41,200/- therefore rests entirely on the bank trail and on the WhatsApp messages by which the Noticee nominated the third-party accounts. Please examine that record before settling the figures in this notice.',
         'The demands relating to GST reporting and credit notes are included solely to protect the client’s own input tax credit position and his statutory records. They are not to be framed, and must not be understood, as any threat of a complaint to the tax authorities.',
       ].map(s => new Paragraph({ numbering: { reference: 'bullets', level: 0 }, spacing: { after: 80, line: 276 }, children: [t(s, { i: true })] })),
     ],
