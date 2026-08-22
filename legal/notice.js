@@ -51,7 +51,10 @@ const CHRON = [
   ['30.07.2026', 'The 21 defective doors returned to the Noticee’s factory at the Complainant’s own cost of Rs. 7,000/- towards freight, the Noticee having expressly refused to bear the same.'],
   ['17.08.2026', 'The Noticee stated that manufacture requires only one day and that the goods would be ready on the first clear day.'],
   ['18.08.2026 to 21.08.2026', 'Ready-date shifted daily. On 21.08.2026 the Noticee asked that a vehicle be sent that evening, stating the goods were ready and being packed.'],
-  ['22.08.2026', 'Loading time shifted from 10:30 a.m. to 2:00 p.m. The Complainant attended the factory with a vehicle at the appointed time and found that only 18 of the 21 doors had been made, and those still under manufacture. He was made to wait several hours.'],
+  ['21.08.2026', 'The Noticee asked that a vehicle be sent that evening, representing that the goods were ready and were being packed. The Complainant messaged the Noticee at 5:30 p.m. asking that the invoice be prepared. No reply was received.'],
+  ['22.08.2026', 'Loading time shifted from 10:30 a.m. to 2:00 p.m. The Complainant attended the factory with a hired vehicle at the appointed time and found that only 18 of the 21 doors had been made, and those still under manufacture. The vehicle was detained at the factory for 4 hours 06 minutes, of which 156 minutes were charged to the Complainant as waiting time.'],
+  ['22.08.2026, 6:40 p.m.', 'The goods finally left the factory. The Noticee issued NO document whatsoever — no tax invoice, no delivery challan, no e-way bill. The Complainant telephoned the Noticee twice and also approached his staff and his manager; the Noticee did not take the calls and the staff refused to speak. The Noticee\u2019s refusal to issue any document, and the Complainant\u2019s attempts to obtain one, stand recorded on video.'],
+  ['22.08.2026', 'On inspection at the factory the replacement doors were themselves found defective, the resin and skin not having adhered properly in several pieces, with the core paper visible.'],
 ];
 
 const chronRows = [
@@ -86,9 +89,10 @@ const DAMAGES = [
   ['2.', 'Freight now payable for re-transporting the replaced doors to the client’s site', '[AMOUNT]'],
   ['3.', 'Charges paid to the Complainant’s own carpenter for two days’ re-measurement and segregation of the consignment', '1,000'],
   ['4.', 'Cutting and re-fitting charges for 73 doors at Rs. 100/- per door, paid to the client’s carpenters', '7,000'],
-  ['5.', 'Cutting charge of Rs. 2/- per sq. ft. levied in the invoice without prior disclosure', '[AMOUNT]'],
-  ['6.', 'Loading charge levied in the invoice without prior disclosure', '1,000'],
-  ['7.', 'Travel, lodging and incidental expenses incurred at Kolkata on 09.07.2026 to 11.07.2026 and on 22.08.2026', '[AMOUNT]'],
+  ['5.', 'Vehicle waiting charges on 22.08.2026 \u2014 156 minutes at Rs. 3.50 per minute, the vehicle having been detained at the Noticee\u2019s factory for 4 hours 06 minutes (Trip CRN113083391386, vehicle WB-01-BB-8397)', '546'],
+  ['6.', 'Cutting charge of Rs. 2/- per sq. ft. levied in the invoice without prior disclosure', '[AMOUNT]'],
+  ['7.', 'Loading charge levied in the invoice without prior disclosure', '1,000'],
+  ['8.', 'Travel, lodging and incidental expenses incurred at Kolkata on 09.07.2026 to 11.07.2026 and on 22.08.2026', '[AMOUNT]'],
 ];
 
 const dmgRow = (cells, o = {}) => new TableRow({
@@ -108,7 +112,7 @@ const dmgRow = (cells, o = {}) => new TableRow({
 const damageRows = [
   dmgRow(['Sl.', 'Particulars', 'Amount (Rs.)'], { head: true }),
   ...DAMAGES.map(r => dmgRow(r)),
-  dmgRow(['', 'Total quantified out-of-pocket loss (excluding items to be filled in)', '15,000'], { b: true }),
+  dmgRow(['', 'Total quantified out-of-pocket loss (excluding items to be filled in)', '15,546'], { b: true }),
 ];
 
 
@@ -221,6 +225,9 @@ const doc = new Document({
       p('3.6  FAILURE OF DUTIES AT DISPATCH. At the time of dispatch on 11.07.2026 you failed to furnish the invoice, the challan or the transporter’s contact details, despite my client requesting the same in writing from the early evening onwards. As a consequence my client was unable to make arrangements for unloading labour at the destination and was compelled to telephone you past midnight, whereupon you responded with objection rather than with the information sought.'),
       p('3.7  CONTINUING BREACH IN RESPECT OF THE REPLACEMENT. The 21 defective pieces were returned to your factory on 30.07.2026. On 17.08.2026 you stated that manufacture required only one day. Thereafter, from 18.08.2026 onwards, you shifted the ready-date daily. On 21.08.2026 you directed my client to send a vehicle that very evening on the representation that the goods were ready and were being packed; had my client done so, his vehicle would have stood idle overnight at his cost. On 22.08.2026 you first fixed loading for 10:30 a.m., then deferred it to 2:00 p.m., and when my client attended with a vehicle at the appointed hour only 18 of the 21 pieces had been made and those were still under manufacture, my client being made to wait for several hours at your premises.'),
 
+      p('3.8  REFUSAL TO ISSUE ANY DOCUMENT AT ALL. On 22.08.2026 the replacement goods were released from your factory at about 6:40 p.m. without any document whatsoever — without a tax invoice, without a delivery challan under Rule 55 of the Central Goods and Services Tax Rules, 2017, and without an e-way bill. My client had requested the document in writing at 5:30 p.m. on 21.08.2026 and thereafter by two telephone calls and in person through your staff and your manager. You neither took the calls nor caused any document to be issued, and your staff declined to speak to my client. My client was thereby compelled to move goods for which he had paid in full without any document from you. Your refusal, and my client\u2019s attempts to obtain the document, are recorded on video and will be relied upon.'),
+      p('3.9  THE REPLACEMENT GOODS ARE THEMSELVES DEFECTIVE. On inspection at your factory on 22.08.2026 it was found that in several of the replacement doors the resin and the skin had not adhered properly, leaving the core paper visible. My client reserves all his rights in respect of the said defects, which are being separately documented on receipt of the consignment.'),
+
       head('4.  LOSS AND DAMAGE SUFFERED BY MY CLIENT'),
       p('4.1  By reason of the aforesaid breaches my client has suffered the following quantified out-of-pocket loss:'),
       new Table({ columnWidths: [700, 6800, 1800], width: { size: 9300, type: WidthType.DXA }, rows: damageRows }),
@@ -242,6 +249,8 @@ const doc = new Document({
         children: [t('Issue to my client a proper credit note and/or delivery challan in respect of the 21 pcs returned to you on 30.07.2026, so as to enable my client to correctly reflect the transaction in his statutory returns;')] }),
       new Paragraph({ numbering: { reference: 'demands', level: 0 }, spacing: { after: 100, line: 276 },
         children: [t('Issue to my client, in respect of the 21 pcs now being re-supplied by way of replacement against the original supply, a proper delivery challan under Rule 55 of the Central Goods and Services Tax Rules, 2017 together with the corresponding e-way bill, and not a fresh tax invoice, the said goods being a replacement of goods already invoiced; and')] }),
+      new Paragraph({ numbering: { reference: 'demands', level: 0 }, spacing: { after: 160, line: 276 },
+        children: [t('Issue forthwith the delivery challan and, where required, the e-way bill in respect of the goods released from your factory on 22.08.2026, no document of any kind having been issued at the time of despatch;')] }),
       new Paragraph({ numbering: { reference: 'demands', level: 0 }, spacing: { after: 160, line: 276 },
         children: [t('Confirm in writing that the full value of the goods supplied has been duly reported by you in your outward supply returns under the Central Goods and Services Tax Act, 2017, so that my client may avail of the input tax credit to which he is lawfully entitled.')] }),
 
@@ -270,6 +279,9 @@ const doc = new Document({
         'Transport receipt / bilty dated 30.07.2026 evidencing payment of Rs. 7,000/- towards return freight.',
         'Receipts or acknowledgements in respect of the carpentry charges of Rs. 1,000/- and Rs. 7,000/-.',
         'Photographs and measurement records of the 21 non-conforming doors.',
+        'Screenshot of the transport operator\u2019s trip record dated 22.08.2026 (Trip CRN113083391386, vehicle WB-01-BB-8397) showing detention of 4 hours 06 minutes and 156 minutes of billed waiting time.',
+        'Video recordings made at the Noticee\u2019s factory on 22.08.2026 evidencing the refusal to issue any despatch document, together with a certificate under Section 63 of the Bharatiya Sakshya Adhiniyam, 2023.',
+        'Photographs of the defective resin and skin adhesion in the replacement doors.',
         'Index of the audio recordings relied upon, together with a certificate under Section 63 of the Bharatiya Sakshya Adhiniyam, 2023.',
       ].map(s => new Paragraph({ numbering: { reference: 'bullets', level: 0 }, spacing: { after: 80, line: 276 }, children: [t(s)] })),
 
