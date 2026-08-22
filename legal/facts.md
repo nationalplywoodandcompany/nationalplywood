@@ -32,9 +32,20 @@
 - 08.07.2026 19:56  Rs 20,000 -> Ajay Sharma (kypsharma@okaxis), a/c nominated by supplier 15:41
 - 08.07.2026 20:45  Rs 50,000 -> Ramkrishna Mondal, PhonePe QR sent by supplier 15:40
 - 11.07.2026 16:02  Rs 51,200 -> Ajay Sharma, +91 90621 80929 sent by supplier 14:39-14:40
-- Supplier's own hisab 08.07.2026: Membrane 479@105=50,295; Lamination 1115.1@122=136,043;
-  GST 14,400; = 200,738; kharcha 13,000; = 2,13,738
-  -> PAID Rs 7,462 MORE than the stated final amount
+- Supplier's handwritten hisab 08.07.2026 = Rs 2,13,738
+- Supplier's typed statement 11.07.2026 (KOLKATA PLYWOOD & COMPANY sheet) = Rs 2,21,214.50:
+    Lamination            54 pc  893.067 sqft @122 = 1,08,954.20
+    Lamination short <25" 15 pc  228.79  sqft @132 =   30,200.28
+    Membrane              25 pc  501.05  sqft @105 =   52,610.25
+    Cutting extra         94 pc 1622.907 sqft @  2 =    3,245.81
+                                              sub  = 1,95,010.50
+    GST 12,204 + LOADING 1,000 + TEMPO 13,000      = 2,21,214.50
+    less payments 20,000+80,000+20,000+50,000      = 1,70,000
+    BALANCE                                        =   51,214.52   (paid 51,200 on 11.07)
+  -> NO OVERPAYMENT. The bill ROSE by Rs 7,476.50 between 08.07 and 11.07, on the day of despatch,
+     by adding cutting Rs 3,245.81 + loading Rs 1,000, re-measuring sqft upward, and re-rating
+     15 pc at 132 instead of 122.
+  -> Rs 13,000 was charged as TEMPO, i.e. carriage was paid for once already.
 
 ## Delay
 - 22.06.2026 18:11 buyer: "13-Days ho gya hai Payment kiye?? 10-15din Maximum bole thy..."
@@ -96,3 +107,26 @@
 - The buyer has WhatsApp read receipts disabled, so his outgoing messages show no read indicator.
   Receipt is established instead by the supplier's own replies, and by delivery.
 - The original of the 02.06.2026 memorandum is in the SUPPLIER's custody. Consider a notice to produce.
+
+## Further facts confirmed by the client (22.08.2026)
+- Client's carpenter charge is Rs 7,300 (73 doors x Rs 100), not Rs 7,000. The customer had otherwise
+  demanded that the ENTIRE consignment be taken back; the cutting was done to save the order.
+- NO credit note was issued by the supplier, and NO debit note was accepted, when the 21 pc were
+  returned on 30.07.2026. The goods remain unaccounted for in both parties' records.
+- 22.08.2026 sequence: at 2:00 pm not one door was complete; 18 were finished on one side only.
+  The 18 were completed at about 5:00 pm. The remaining 3 were then taken up, but the skin the
+  customer had selected was exhausted at the factory, so a photograph of an alternative skin had to
+  be sent to the customer on WhatsApp for approval on the spot. Goods finished about 6:00 pm and
+  left the factory at 6:40 pm with no bill and no challan, although the challan had been asked for
+  by message on the night of 21.08 and again at 5:00 pm on 22.08.
+
+## CORRECTED DAMAGES
+  Return freight 29.07                       7,000
+  Freight 22.08 (incl. Rs 546 waiting)       6,940
+  Own carpenter, 2 days re-measurement       1,000
+  Customer's carpenters, 73 x Rs 100         7,300
+  Cutting charge introduced at despatch      3,246
+  Loading charge introduced at despatch      1,000
+  Re-rating 15 pc at 132 vs 122              2,288
+  ------------------------------------------------
+  TOTAL                                     28,774   plus Kolkata travel and lodging

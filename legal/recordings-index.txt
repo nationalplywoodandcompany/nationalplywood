@@ -1,0 +1,23 @@
+INDEX OF CALL RECORDINGS  -  Kolkata Plywood & Co. v. Wood & Wood Products
+(for the certificate under Section 63, Bharatiya Sakshya Adhiniyam 2023)
+
+#   DATE         TIME    DURATION   SIZE     WHAT THE RECORD SHOWS ON THAT DAY
+----------------------------------------------------------------------------------------------------------------------
+1   2026-07-13   14:45   0m 08s      161KB   Day the corrected invoice 18/WWP/26-27 was issued (first one was in ASF Plywood name)
+2   2026-07-16   13:02   0m 04s       97KB   Day the 21 pc defect was reported; supplier asked for pics and sizes
+3   2026-07-16   13:15   0m 44s      868KB   Day the 21 pc defect was reported; supplier asked for pics and sizes
+4   2026-07-22   11:42   4m 15s     4983KB   Ten days after delivery; replacement still not begun
+5   2026-07-28   18:15   1m 55s     2259KB   Day before the 21 pc were despatched back to the factory
+6   2026-07-28   18:17   1m 12s     1423KB   Day before the 21 pc were despatched back to the factory
+7   2026-07-30   11:30   0m 37s      738KB   21 pc reached the factory; "Will rectify and send / Cannot confirm exact time now"
+8   2026-07-30   12:59   4m 54s     5743KB   21 pc reached the factory; "Will rectify and send / Cannot confirm exact time now"
+9   2026-07-31   09:21   2m 00s     2349KB   Client had set out for the factory; supplier messaged "No need to come." at 09:20
+10  2026-08-05   10:56   1m 01s     1196KB   Replacement still not made, one week after return
+11  2026-08-18   11:32   1m 01s     1208KB   Day after "Nai. Weather dhek rhe hai?"
+12  2026-08-19   10:51   0m 13s      261KB   Ready-date shifting daily
+13  2026-08-20   12:57   0m 55s     1092KB   Ready-date shifting daily
+14  2026-08-21   14:30   0m 52s     1035KB   Supplier said loading would be 10:00-10:30 next morning
+15  2026-08-22   14:36   0m 51s     1012KB   Client at the factory; only 18 of 21 pc made, still under manufacture
+----------------------------------------------------------------------------------------------------------------------
+15 recordings, total 21 minutes.
+Original files retained on the original handset. Filenames carry the date and time as YYMMDDHHMM.
