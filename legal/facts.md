@@ -16,7 +16,10 @@
 
 ## Order
 - 01.06.2026 09:52 rates: MEMBRANE HW 105 / LAMINATION 112 / SIDE PINE +15
-- 02.06.2026 signed order note (supplier's book, dated & signed 2/06/26):
+- 02.06.2026 memorandum — WRITTEN BY THE SUPPLIER in his own hand on his own pad at his office;
+  SIGNED BY THE BUYER as acknowledgement of the Rs 20,000 cash; ORIGINAL RETAINED BY THE SUPPLIER,
+  buyer allowed only to photograph it; photo sent to supplier on WhatsApp 02.06.2026 17:19 with the
+  endorsement "20000/- cash Paid (As a Advance) To BG timber From Kolkata Plywood & Co." — NEVER DISPUTED BY HIM:
     "Kolkata Plywood 2/6/26 | 1) BGL 10 - Lamination 140/- | 2) BG 26 - Membrane Rosewood 135/-
      H/W | + Delivery Jhargram | + 50% Bill | 2/6 - 20000 Advance | Total 40% Advance"
   -> DELIVERY TO JHARGRAM WAS INCLUDED IN THE CONTRACT
@@ -88,3 +91,8 @@
 - 17.07.2026 14:26 "Uska Dusra Project bhi Mahina bhar me Complete hone wala hai...
   agr Theek se Maal deta to Agle project me 150pc door ka order tha"
 - 20.07.2026 18:33 "Party ke samne Reputation Pura kharab ho Gya hai humara. 2-3 Project Aur start hone wala tha"
+
+## Note on the evidence
+- The buyer has WhatsApp read receipts disabled, so his outgoing messages show no read indicator.
+  Receipt is established instead by the supplier's own replies, and by delivery.
+- The original of the 02.06.2026 memorandum is in the SUPPLIER's custody. Consider a notice to produce.
