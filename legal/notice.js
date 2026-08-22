@@ -39,8 +39,9 @@ const rule = () => new Paragraph({
 const CHRON = [
   ['02.06.2026', 'Meeting at the Noticee’s office. Advance of Rs. 20,000/- paid in cash. Noticee represented that delivery would be completed within 10 to 15 days.'],
   ['04.06.2026', 'Complete door size list (94 pcs) sent to the Noticee on WhatsApp.'],
-  ['09.06.2026', 'Rs. 80,000/- transferred to the Noticee’s current account on his demand.'],
-  ['[DATE]', 'Balance of Rs. [AMOUNT]/- transferred to the savings account nominated by the Noticee.'],
+  ['09.06.2026', 'Rs. 80,000/- transferred to the current account of M/s Wood and Wood Products on the Noticee’s demand.'],
+  ['08.07.2026', 'Rs. 50,000/- and Rs. 20,000/- transferred to savings accounts of two third parties nominated by the Noticee.'],
+  ['11.07.2026', 'Rs. 51,200/- transferred to a savings account of a third party nominated by the Noticee, on the very date of dispatch. Total consideration of Rs. 2,21,200/- thereby stood fully paid.'],
   ['24.06.2026', 'Outer limit of the promised 15-day delivery period expired. No delivery made.'],
   ['25.06.2026 to 10.07.2026', 'Delivery repeatedly postponed by the Noticee on varying pretexts (rain, delayed payment, vehicle problems). Assurances of 30.06, 02.07, 09.07, 10.07 and 11.07 given and broken in turn.'],
   ['09.07.2026 to 11.07.2026', 'The Complainant travelled to and stayed at Kolkata for three days specifically to be present at the time of loading, having informed the Noticee in advance in writing. The Noticee assured him that his attendance was unnecessary as the goods were correct.'],
@@ -110,6 +111,34 @@ const damageRows = [
   dmgRow(['', 'Total quantified out-of-pocket loss (excluding items to be filled in)', '15,000'], { b: true }),
 ];
 
+
+// ---- Payment schedule table -------------------------------------------
+const PAYMENTS = [
+  ['02.06.2026', 'Cash', 'Paid in hand at the Noticee’s office', '20,000'],
+  ['09.06.2026', 'Bank transfer', 'Current account of M/s Wood and Wood Products  [VERIFY DATE AGAINST BANK STATEMENT]', '80,000'],
+  ['08.07.2026', 'Bank transfer', 'Savings account in the name of Sri Ramkrishna Mandal, as nominated by the Noticee', '50,000'],
+  ['08.07.2026', 'Bank transfer', 'Savings account in the name of Sri Ajay Sharma, as nominated by the Noticee', '20,000'],
+  ['11.07.2026', 'Bank transfer', 'Savings account in the name of Sri Ajay Sharma, as nominated by the Noticee', '51,200'],
+];
+
+const payCell = (txt, w, o = {}) => new TableCell({
+  width: { size: w, type: WidthType.DXA },
+  margins: { top: 80, bottom: 80, left: 110, right: 110 },
+  shading: o.head ? { type: ShadingType.CLEAR, fill: 'E8E8E8' } : undefined,
+  children: [rich([t(txt, { b: o.head || o.b })], { after: 0, align: o.right ? AlignmentType.RIGHT : undefined })],
+});
+
+const payRows = [
+  new TableRow({ tableHeader: true, children: [
+    payCell('Date', 1600, { head: true }), payCell('Mode', 2100, { head: true }),
+    payCell('Paid into', 3900, { head: true }), payCell('Amount (Rs.)', 1700, { head: true, right: true }) ] }),
+  ...PAYMENTS.map(r => new TableRow({ children: [
+    payCell(r[0], 1600), payCell(r[1], 2100), payCell(r[2], 3900), payCell(r[3], 1700, { right: true }) ] })),
+  new TableRow({ children: [
+    payCell('', 1600), payCell('', 2100), payCell('Total consideration paid', 3900, { b: true }),
+    payCell('2,21,200', 1700, { b: true, right: true }) ] }),
+];
+
 // ---- Document ---------------------------------------------------------
 const doc = new Document({
   numbering: {
@@ -172,7 +201,11 @@ const doc = new Document({
       p('1.2  On 02.06.2026 my client met you at your office and placed an order for 94 pcs of flush doors, to be manufactured strictly in accordance with the sizes to be furnished by my client. On the same date my client paid you a sum of Rs. 20,000/- in cash by way of advance at your office.'),
       p('1.3  At the time of placing the said order you expressly represented and assured my client that the goods would be manufactured and delivered within 10 to 15 days. You further represented, in writing on WhatsApp, that your factory has a manufacturing capacity of approximately 3,000 doors per month. My client placed the order and made payment relying upon these representations.'),
       p('1.4  On 04.06.2026 my client furnished to you, in writing on WhatsApp, the complete size list of all 94 doors. That list is the contractual specification and is on record.'),
-      rich([t('1.5  On your demand my client transferred a further sum of Rs. 80,000/- to your current account on 09.06.2026, and a further sum of Rs. '), BLANK('[AMOUNT]'), t('/- on '), BLANK('[DATE]'), t(' to a savings account nominated by you. The entire consideration stood duly paid by my client.')], { after: 120 }),
+      p('1.5  On your instructions and at the accounts nominated by you from time to time, my client paid to you the entire consideration aggregating to Rs. 2,21,200/- as follows:'),
+      new Table({ columnWidths: [1600, 2100, 3900, 1700], width: { size: 9300, type: WidthType.DXA }, rows: payRows }),
+      p('', { after: 120 }),
+      p('1.6  It is material to record that of the said aggregate sum of Rs. 2,21,200/-, only Rs. 80,000/- was received into the current account maintained in the name of M/s Wood and Wood Products. The balance was taken by you in cash and into savings bank accounts standing in the names of third parties nominated by you, namely Sri Ramkrishna Mandal and Sri Ajay Sharma, neither of whom is a party to the contract. The particulars of each such account were furnished by you to my client in writing on WhatsApp, and those messages are on record.'),
+      p('1.7  Despite receipt of the entire consideration, you have to date failed and neglected to issue to my client a tax invoice for the full value of the goods supplied. My client calls upon you to do so forthwith.'),
 
       head('2.  CHRONOLOGY OF EVENTS'),
       p('2.1  The material events are set out below. Each of them is supported by contemporaneous WhatsApp messages, call recordings, bank statements and transport documents in my client’s possession:'),
@@ -206,7 +239,9 @@ const doc = new Document({
       new Paragraph({ numbering: { reference: 'demands', level: 0 }, spacing: { after: 100, line: 276 },
         children: [t('Refund to my client the cutting charge of Rs. 2/- per sq. ft. and the loading charge of Rs. 1,000/- levied without prior disclosure, together with a corresponding credit note under the Central Goods and Services Tax Act, 2017;')] }),
       new Paragraph({ numbering: { reference: 'demands', level: 0 }, spacing: { after: 100, line: 276 },
-        children: [t('Issue to my client a proper credit note and/or delivery challan in respect of the 21 pcs returned to you on 30.07.2026, so as to enable my client to correctly reflect the transaction in his statutory returns; and')] }),
+        children: [t('Issue to my client a proper credit note and/or delivery challan in respect of the 21 pcs returned to you on 30.07.2026, so as to enable my client to correctly reflect the transaction in his statutory returns;')] }),
+      new Paragraph({ numbering: { reference: 'demands', level: 0 }, spacing: { after: 100, line: 276 },
+        children: [t('Issue to my client a proper tax invoice for the full value of the goods supplied, namely Rs. 2,21,200/-, in accordance with Section 31 of the Central Goods and Services Tax Act, 2017, my client having paid the said sum in its entirety; and')] }),
       new Paragraph({ numbering: { reference: 'demands', level: 0 }, spacing: { after: 160, line: 276 },
         children: [t('Confirm in writing that the full value of the goods supplied has been duly reported by you in your outward supply returns under the Central Goods and Services Tax Act, 2017, so that my client may avail of the input tax credit to which he is lawfully entitled.')] }),
 
@@ -247,6 +282,8 @@ const doc = new Document({
         'If the aggregate claim exceeds the specified value of Rs. 3,00,000/-, the suit will lie before the Commercial Court and pre-institution mediation under Section 12A of the Commercial Courts Act, 2015 will be mandatory save where urgent interim relief is sought. Please advise the client accordingly.',
         'The client is a trader who purchased the goods for onward resale; the availability of a remedy under the Consumer Protection Act, 2019 in view of Section 2(7) may require consideration.',
         'The client holds audio recordings of the conversations to which he was himself a party. Please preserve the original recordings on the original device and prepare the certificate under Section 63 of the Bharatiya Sakshya Adhiniyam, 2023.',
+        'IMPORTANT — of the total consideration of Rs. 2,21,200/-, only Rs. 80,000/- was paid into the Noticee firm’s own current account. Rs. 20,000/- was paid in cash and Rs. 1,21,200/- into savings accounts of two individuals nominated by the Noticee. Please satisfy yourself, from the WhatsApp record, that the Noticee himself furnished those account particulars, as proof of payment will otherwise be contested. Please also advise the client separately on his own position under Section 40A(3) of the Income-tax Act, 1961 in respect of the cash payment, and on his invoicing and input tax credit position, before this notice is issued.',
+        'The date of the Rs. 80,000/- transfer must be verified against the bank statement — the client has stated it variously as 09.06.2026 and 09.07.2026, and the delay computation in this notice turns on it.',
         'The demands relating to GST reporting and credit notes are included solely to protect the client’s own input tax credit position and his statutory records. They are not to be framed, and must not be understood, as any threat of a complaint to the tax authorities.',
       ].map(s => new Paragraph({ numbering: { reference: 'bullets', level: 0 }, spacing: { after: 80, line: 276 }, children: [t(s, { i: true })] })),
     ],
